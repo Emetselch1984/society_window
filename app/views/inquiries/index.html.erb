@@ -1,0 +1,13 @@
+<div class="container">
+  <%= form_with(model: @inquiry, url: confirm_path, local: true) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, placeholder: "email" %>
+    <%= f.label :name %>
+    <%= f.text_field :name,placeholder: "name" %>
+    <%= f.label "関係性" %>
+    <%= f.text_field :relation,placeholder: "name" %>
+    <%= f.label "その他" %>
+    <%= f.text_area :context,placeholder: "その他" %>
+    <%= f.submit '送信'%>
+  <% end %>
+</div>

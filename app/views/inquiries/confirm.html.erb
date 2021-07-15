@@ -1,0 +1,18 @@
+<div class="container">
+  <%= form_with(model: @inquiry, url: thanks_path, local: true) do |f| %>
+    <%= f.label :email %>
+    <%= f.hidden_field :email %>
+    <%= @inquiry.email %>
+    <%= f.label :name %>
+    <%= f.hidden_field :name %>
+    <%= @inquiry.name %>
+    <%= f.label "関係性" %>
+    <%= f.hidden_field :relation %>
+    <%= @inquiry.relation %>
+    <%= f.label "その他" %>
+    <%= f.hidden_field :context %>
+    <%= @inquiry.context %>
+    <%= f.submit '送信'%>
+  <% end %>
+  <%= link_to "やり直す" ,root_path %>
+</div>

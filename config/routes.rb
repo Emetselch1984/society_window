@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root "inquiries#index"
+  post "confirm",to: "inquiries#confirm"
+  post "thanks",to: "inquiries#thanks"
+
 end
